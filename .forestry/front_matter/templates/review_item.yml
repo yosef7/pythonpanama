@@ -1,0 +1,15 @@
+---
+label: Review Item
+hide_body: true
+is_partial: true
+display_field: author
+fields:
+  - type: text
+    name: author
+    label: Author
+  - type: file
+    name: avatar
+    label: Avatar
+  - type: textarea
+    name: content
+    label: Content

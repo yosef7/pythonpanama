@@ -1,0 +1,44 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: static/admin
+webhook_url: 'https://api.stackbit.com/project/5ea47544f3d7f3001b8c87b4/webhook/forestry'
+sections:
+  - type: document
+    label: Site Configuration
+    path: site-metadata.json
+    templates:
+      - config
+  - type: directory
+    path: src/pages
+    match: '**/*'
+    exclude: blog/index.md
+    label: Landing Page
+    create: all
+    templates:
+      - landing
+  - type: document
+    label: Blog
+    path: src/pages/blog/index.md
+    templates:
+      - blog
+  - type: directory
+    path: src/pages
+    match: '**/*'
+    exclude: '{posts/**,blog/index.md}'
+    label: Page
+    create: all
+    templates:
+      - page
+  - type: directory
+    path: src/pages/posts
+    match: '**/*'
+    label: Post
+    create: all
+    templates:
+      - post
+upload_dir: static/images
+public_path: /images
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ':filename:'
