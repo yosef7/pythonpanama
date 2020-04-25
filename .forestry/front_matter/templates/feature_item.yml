@@ -1,31 +1,30 @@
 ---
 label: Feature Item
 hide_body: true
-is_partial: true
 display_field: title
 fields:
-  - type: text
-    name: title
-    label: Title
-  - type: textarea
-    name: content
-    label: Content
-    description: Feature description
-    config:
-      wysiwyg: true
-      schema:
-        format: markdown
-  - type: file
-    name: image
-    label: Image
-    description: Feature image
-  - type: field_group_list
-    name: actions
-    label: Action Buttons
-    fields:
-      - type: include
-        name: include_action
-        label: Action
-        template: action
-    config:
-      labelField: label
+- type: text
+  name: title
+  label: Title
+- type: textarea
+  name: content
+  label: Content
+  description: Feature description
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: file
+  name: image
+  label: Image
+  description: Feature image
+- type: field_group_list
+  name: actions
+  label: Action Buttons
+  fields:
+  - type: include
+    name: include_action
+    label: Action
+    template: action
+  config:
+    labelField: label

@@ -1,40 +1,39 @@
 ---
 label: Site Configuration
 hide_body: true
-is_partial: false
 fields:
-  - type: text
-    name: title
-    label: Title
-    description: Site title
-    config:
-      required: true
-  - type: select
-    name: palette
-    label: Color Palette
-    description: The color palette of the site
-    default: blue
-    config:
-      source:
-        type: custom
-      options:
-        - blue
-        - purple
-        - green
-        - orange
-  - type: field_group
-    name: header
+- type: text
+  name: title
+  label: Title
+  description: Site title
+  config:
+    required: true
+- type: select
+  name: palette
+  label: Color Palette
+  description: The color palette of the site
+  default: blue
+  config:
+    source:
+      type: custom
+    options:
+    - blue
+    - purple
+    - green
+    - orange
+- type: field_group
+  name: header
+  label: Header Configuration
+  fields:
+  - type: include
+    name: include_header
     label: Header Configuration
-    fields:
-      - type: include
-        name: include_header
-        label: Header Configuration
-        template: header
-  - type: field_group
-    name: footer
+    template: header
+- type: field_group
+  name: footer
+  label: Footer Configuration
+  fields:
+  - type: include
+    name: include_footer
     label: Footer Configuration
-    fields:
-      - type: include
-        name: include_footer
-        label: Footer Configuration
-        template: footer
+    template: footer

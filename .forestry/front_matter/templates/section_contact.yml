@@ -1,47 +1,45 @@
 ---
 label: Contact Section
 hide_body: true
-is_partial: true
 display_field: title
 fields:
-  - type: text
-    name: title
-    label: Title
-    description: The title of the section
-  - type: text
-    name: section_id
-    label: Element ID
-    description: >-
-      Element ID can be used in links to scroll the page to this section when
-      link clicked
-  - type: text
-    name: subtitle
-    label: Subtitle
-    description: The text shown below the title
-  - type: textarea
-    name: content
-    label: Content
-    description: 'Section content, appears before contact form'
-    config:
-      wysiwyg: true
-      schema:
-        format: markdown
-  - type: select
-    name: background
-    label: Background
-    description: The background of the section
-    default: gray
-    config:
-      source:
-        type: custom
-      options:
-        - gray
-        - white
-  - type: text
-    name: type
-    label: Reference Type Name
-    description: 'Name of the Stackbit object model, used by fields of type reference'
-    hidden: true
-    default: section_contact
-    config:
-      required: true
+- type: text
+  name: title
+  label: Title
+  description: The title of the section
+- type: text
+  name: section_id
+  label: Element ID
+  description: Element ID can be used in links to scroll the page to this section
+    when link clicked
+- type: text
+  name: subtitle
+  label: Subtitle
+  description: The text shown below the title
+- type: textarea
+  name: content
+  label: Content
+  description: Section content, appears before contact form
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: select
+  name: background
+  label: Background
+  description: The background of the section
+  default: gray
+  config:
+    source:
+      type: custom
+    options:
+    - gray
+    - white
+- type: text
+  name: type
+  label: Reference Type Name
+  description: Name of the Stackbit object model, used by fields of type reference
+  hidden: true
+  default: section_contact
+  config:
+    required: true

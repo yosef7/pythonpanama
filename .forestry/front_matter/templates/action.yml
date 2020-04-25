@@ -1,25 +1,24 @@
 ---
 label: Action
 hide_body: true
-is_partial: true
 display_field: label
 fields:
-  - type: text
-    name: label
-    label: Label
-    config:
-      required: true
-  - type: text
-    name: url
-    label: URL
-    config:
-      required: true
-  - type: boolean
-    name: primary
-    label: Primary
-    description: Use primary color for this action
-  - type: boolean
-    name: new_window
-    label: Open in new window
-    description: Should the link open a new tab
-    default: true
+- type: text
+  name: label
+  label: Label
+  config:
+    required: true
+- type: text
+  name: url
+  label: URL
+  config:
+    required: true
+- type: boolean
+  name: primary
+  label: Primary
+  description: Use primary color for this action
+- type: boolean
+  name: new_window
+  label: Open in new window
+  description: Should the link open a new tab
+  default: true
